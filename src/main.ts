@@ -12,7 +12,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/', app, document);
   //const port = Math.floor(Math.random() * (4000 - 3001) + 3001);
-  await app.listen(process.env.PORT || 8080);
+  await app.listen(parseInt(process.env.PORT) || 8080);
   //console.log('app is listening on port '+port)
 }
 bootstrap();
